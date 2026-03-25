@@ -1,0 +1,100 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\DELL\\OneDrive\\Masa\u00FCst\u00FC\\SUNUCU\\PROJE\\PROJE\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A9651FE3-FB96-2C01-02B3-123AAB18ED9A}|PROJE\\PROJE.csproj|c:\\users\\dell\\onedrive\\masa\u00FCst\u00FC\\sunucu\\proje\\proje\\proje\\clinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9651FE3-FB96-2C01-02B3-123AAB18ED9A}|PROJE\\PROJE.csproj|solutionrelative:proje\\clinet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9651FE3-FB96-2C01-02B3-123AAB18ED9A}|PROJE\\PROJE.csproj|c:\\users\\dell\\onedrive\\masa\u00FCst\u00FC\\sunucu\\proje\\proje\\proje\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9651FE3-FB96-2C01-02B3-123AAB18ED9A}|PROJE\\PROJE.csproj|solutionrelative:proje\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9651FE3-FB96-2C01-02B3-123AAB18ED9A}|PROJE\\PROJE.csproj|c:\\users\\dell\\onedrive\\masa\u00FCst\u00FC\\sunucu\\proje\\proje\\proje\\serverayar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9651FE3-FB96-2C01-02B3-123AAB18ED9A}|PROJE\\PROJE.csproj|solutionrelative:proje\\serverayar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9651FE3-FB96-2C01-02B3-123AAB18ED9A}|PROJE\\PROJE.csproj|c:\\users\\dell\\onedrive\\masa\u00FCst\u00FC\\sunucu\\proje\\proje\\proje\\sql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9651FE3-FB96-2C01-02B3-123AAB18ED9A}|PROJE\\PROJE.csproj|solutionrelative:proje\\sql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SQL.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Masa\u00FCst\u00FC\\SUNUCU\\PROJE\\PROJE\\PROJE\\SQL.cs",
+              "RelativeDocumentMoniker": "PROJE\\SQL.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Masa\u00FCst\u00FC\\SUNUCU\\PROJE\\PROJE\\PROJE\\SQL.cs",
+              "RelativeToolTip": "PROJE\\SQL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T23:01:48.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "serverayar.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Masa\u00FCst\u00FC\\SUNUCU\\PROJE\\PROJE\\PROJE\\serverayar.cs",
+              "RelativeDocumentMoniker": "PROJE\\serverayar.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Masa\u00FCst\u00FC\\SUNUCU\\PROJE\\PROJE\\PROJE\\serverayar.cs",
+              "RelativeToolTip": "PROJE\\serverayar.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T19:10:32.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "clinet.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Masa\u00FCst\u00FC\\SUNUCU\\PROJE\\PROJE\\PROJE\\clinet.cs",
+              "RelativeDocumentMoniker": "PROJE\\clinet.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Masa\u00FCst\u00FC\\SUNUCU\\PROJE\\PROJE\\PROJE\\clinet.cs",
+              "RelativeToolTip": "PROJE\\clinet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T19:10:25.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Masa\u00FCst\u00FC\\SUNUCU\\PROJE\\PROJE\\PROJE\\Program.cs",
+              "RelativeDocumentMoniker": "PROJE\\Program.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Masa\u00FCst\u00FC\\SUNUCU\\PROJE\\PROJE\\PROJE\\Program.cs",
+              "RelativeToolTip": "PROJE\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T19:10:10.506Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 49,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
