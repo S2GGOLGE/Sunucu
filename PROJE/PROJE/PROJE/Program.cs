@@ -9,7 +9,7 @@ namespace PROJE
         static async Task Main(string[] args)
         {
             // Sunucu ayarlarını belirle
-            serverayar.serversettings("127.0.0.1", 8585);
+            serverayar.serversettings("192.168.1.115", 8585);
 
             // Peer sistemini başlat
             await Peer.StartAsync();

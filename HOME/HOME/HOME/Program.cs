@@ -6,7 +6,7 @@ namespace HOME
     {
         static void Main(string[] args)
         {
-            serversettings.serverayar("127.0.0.1", 8585);
+            serversettings.serverayar("192.168.1.115", 8585);
             client.Start();
             Console.ReadKey();
         }

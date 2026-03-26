@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ANA SUNUCU")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9aabe195c317983df0051f01fe02b8bd66020ece")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db4ae57b631ba267df107c67bd81ab0ad5b9d4ad")]
 [assembly: System.Reflection.AssemblyProductAttribute("ANA SUNUCU")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ANA SUNUCU")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -27,7 +27,7 @@ namespace ANA_SUNUCU
             {
                 serverProcess = new Process();
                 serverProcess.StartInfo.FileName = @"C:\Users\DELL\OneDrive\Masaüstü\SUNUCU\HOME\HOME\HOME\bin\Debug\net10.0\HOME.exe";
-                serverProcess.StartInfo.Arguments = "127.0.0.1 8585";
+                serverProcess.StartInfo.Arguments = "192.168.1.115 8585";
                 serverProcess.StartInfo.UseShellExecute = true;
                 serverProcess.StartInfo.Verb = "runas"; // Yönetici olarak çalıştır
                 serverProcess.Start();
@@ -82,7 +82,7 @@ namespace ANA_SUNUCU
                 // Sonra başlat
                 serverProcess = new Process();
                 serverProcess.StartInfo.FileName = @"C:\Users\DELL\OneDrive\Masaüstü\SUNUCU\HOME\HOME\HOME\bin\Debug\net10.0\HOME.exe";
-                serverProcess.StartInfo.Arguments = "127.0.0.1 8585";
+                serverProcess.StartInfo.Arguments = "192.168.1.115 8585";
                 serverProcess.StartInfo.UseShellExecute = true;
                 serverProcess.StartInfo.Verb = "runas";
                 serverProcess.Start();

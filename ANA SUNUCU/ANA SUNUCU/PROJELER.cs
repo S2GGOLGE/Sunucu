@@ -33,7 +33,7 @@ namespace ANA_SUNUCU
             {
                 serverprorcess = new Process();
                 serverprorcess.StartInfo.FileName = @"""C:\Users\DELL\OneDrive\Masaüstü\SUNUCU\PROJE\PROJE\PROJE\bin\Debug\net10.0\PROJE.exe""";
-                serverprorcess.StartInfo.Arguments = "127.0.0.1 8585";
+                serverprorcess.StartInfo.Arguments = "192.168.1.115 8585";
                 serverprorcess.StartInfo.UseShellExecute = true;
                 serverprorcess.StartInfo.Verb = "runas";//yonetici olarak çalışmasını sağlar
                 serverprorcess.Start();
@@ -42,9 +42,8 @@ namespace ANA_SUNUCU
             }
             catch(Exception EX)
             {
-                MessageBox.Show("HATA:" + EX.Message);
             }
-        }
+        } 
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -62,7 +61,7 @@ namespace ANA_SUNUCU
                 // Sonra başlat
                 serverprorcess = new Process();
                 serverprorcess.StartInfo.FileName = @"""C:\Users\DELL\OneDrive\Masaüstü\SUNUCU\PROJE\PROJE\PROJE\bin\Debug\net10.0\PROJE.exe""";
-                serverprorcess.StartInfo.Arguments = "127.0.0.1 8585";
+                serverprorcess.StartInfo.Arguments = "192.168.1.115 8585";
                 serverprorcess.StartInfo.UseShellExecute = true;
                 serverprorcess.StartInfo.Verb = "runas";
                 serverprorcess.Start();
