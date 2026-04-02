@@ -32,7 +32,7 @@ namespace ANA_SUNUCU
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Çıkış Yapmak İstedğinize Emin Misiniz","Sistem",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Question);
+            MessageBox.Show("Çıkış Yapmak İstedğinize Emin Misiniz", "Sistem", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             Login login = new Login();
             login.Show();
             this.Close();
@@ -75,7 +75,24 @@ namespace ANA_SUNUCU
             }
             catch (Exception ex)
             {
-                MessageBox.Show("HATA:"+ex.Message);
+                MessageBox.Show("HATA:" + ex.Message);
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string path = @"C:\Users\DELL\OneDrive\Masaüstü\Projeler\Sene Odevi\Sene Odevi Backend\SeneOdev\bin\Debug\net8.0\SeneOdev.exe";
+                serverProcess = new Process();
+                serverProcess.StartInfo.FileName = path;
+                serverProcess.StartInfo.UseShellExecute = true;
+                serverProcess.Start();
+                MessageBox.Show("Sene Odev Backend Aktif");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("HATA:" + ex.Message);
             }
         }
     }
