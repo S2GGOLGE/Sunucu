@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Net.Sockets;
+using System.Text;
 
 namespace HOME
 {
@@ -63,16 +64,20 @@ namespace HOME
                 Console.WriteLine("Listener başlatılamadı: " + ex.Message);
             }
         }
-
         private static void AcceptCallback(IAsyncResult ar)
         {
             try
             {
                 TcpClient incoming = Listener.EndAcceptTcpClient(ar);
 
-                Console.WriteLine("Bir Sistem Bağlandı");
+                // Tanıtım mesajını oku
+                NetworkStream stream = incoming.GetStream();
+                byte[] buffer = new byte[1024];
+                int bytesRead = stream.Read(buffer, 0, buffer.Length);
+                string mesaj = Encoding.UTF8.GetString(buffer, 0, bytesRead);
 
-                // tekrar bağlantı bekle
+                Console.WriteLine($"{mesaj} BAĞLANDI ");
+
                 Listener.BeginAcceptTcpClient(AcceptCallback, null);
             }
             catch (Exception ex)

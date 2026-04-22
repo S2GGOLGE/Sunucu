@@ -1,0 +1,7 @@
+PROJE PORTALI: 8584
+ANA SUNUCU: 8585
+HOME SUNUCU: 8586
+PROJE SUNUCU: 8587
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+📌 SQL BAĞLANTI DİZESİ (TXT)
+Data Source=EMREE;Initial Catalog=SUNUCU;Integrated Security=True;Multiple Active Result Sets=True;Encrypt=False
