@@ -32,7 +32,6 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
-            button4 = new Button();
             button5 = new Button();
             button6 = new Button();
             SuspendLayout();
@@ -67,16 +66,6 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
-            // button4
-            // 
-            button4.Location = new Point(6, 152);
-            button4.Name = "button4";
-            button4.Size = new Size(311, 84);
-            button4.TabIndex = 3;
-            button4.Text = "Jarvis";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
             // button5
             // 
             button5.Location = new Point(477, 152);
@@ -89,11 +78,11 @@
             // 
             // button6
             // 
-            button6.Location = new Point(10, 50);
+            button6.Location = new Point(6, 140);
             button6.Name = "button6";
             button6.Size = new Size(307, 96);
             button6.TabIndex = 5;
-            button6.Text = "Sene Odevi Backend";
+            button6.Text = "GYM-PRO BACKEND";
             button6.UseVisualStyleBackColor = true;
             button6.Click += button6_Click;
             // 
@@ -104,7 +93,6 @@
             ClientSize = new Size(800, 450);
             Controls.Add(button6);
             Controls.Add(button5);
-            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -120,7 +108,6 @@
         private Button button1;
         private Button button2;
         private Button button3;
-        private Button button4;
         private Button button5;
         private Button button6;
     }

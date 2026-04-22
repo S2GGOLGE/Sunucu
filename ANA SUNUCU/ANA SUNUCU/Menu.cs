@@ -63,7 +63,7 @@ namespace ANA_SUNUCU
         {
             try
             {
-                string path = @"C:\Users\DELL\OneDrive\Masaüstü\Projeler\EV TAKSİT\EV TAKSİT\bin\Debug\EV TAKSİT.exe";
+                string path = @"Y:\TAKSİT TAKİP\TAKSİT TAKİP\bin\Debug\net10.0-windows\TAKSİT TAKİP.exe";
                 serverProcess = new Process();
                 serverProcess.StartInfo.FileName = path;
                 serverProcess.StartInfo.Arguments = "127.0.0.1 8585";
@@ -83,7 +83,7 @@ namespace ANA_SUNUCU
         {
             try
             {
-                string path = @"C:\Users\DELL\OneDrive\Masaüstü\Projeler\Sene Odevi\Sene Odevi Backend\SeneOdev\bin\Debug\net8.0\SeneOdev.exe";
+                string path = @"Y:\GYM-PRO\Backend\SeneOdev\bin\Debug\net8.0\SeneOdev.exe";
                 serverProcess = new Process();
                 serverProcess.StartInfo.FileName = path;
                 serverProcess.StartInfo.UseShellExecute = true;
