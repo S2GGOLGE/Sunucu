@@ -26,7 +26,7 @@ namespace ANA_SUNUCU
             try
             {
                 serverProcess = new Process();
-                serverProcess.StartInfo.FileName = @"C:\Users\DELL\OneDrive\Masaüstü\SUNUCU\HOME\HOME\HOME\bin\Debug\net10.0\HOME.exe";
+                serverProcess.StartInfo.FileName = @"Y:\Sunucu\HOME\HOME\HOME\bin\Debug\net10.0\HOME.exe";
                 serverProcess.StartInfo.Arguments = "192.168.1.115 8585";
                 serverProcess.StartInfo.UseShellExecute = true;
                 serverProcess.StartInfo.Verb = "runas"; // Yönetici olarak çalıştır

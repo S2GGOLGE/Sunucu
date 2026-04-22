@@ -32,7 +32,7 @@ namespace ANA_SUNUCU
             try
             {
                 serverprorcess = new Process();
-                serverprorcess.StartInfo.FileName = @"""C:\Users\DELL\OneDrive\Masaüstü\SUNUCU\PROJE\PROJE\PROJE\bin\Debug\net10.0\PROJE.exe""";
+                serverprorcess.StartInfo.FileName = @"Y:\Sunucu\PROJE\PROJE\PROJE\bin\Debug\net10.0\PROJE.exe";
                 serverprorcess.StartInfo.Arguments = "192.168.1.115 8585";
                 serverprorcess.StartInfo.UseShellExecute = true;
                 serverprorcess.StartInfo.Verb = "runas";//yonetici olarak çalışmasını sağlar

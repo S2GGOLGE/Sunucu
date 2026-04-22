@@ -20,12 +20,12 @@ namespace ANA_SUNUCU
         {
 
         }
-        SqlConnection bağlantı = new SqlConnection("Data Source=EMREE\\SQLEXPRESS;Initial Catalog=Sunucu;Integrated Security=True;Encrypt=False");
+        SqlConnection bağlantı = new SqlConnection("Data Source=Emree;Initial Catalog=Sıunucu;Integrated Security=True;Multiple Active Result Sets=True;Encrypt=False");
         private void button1_Click(object sender, EventArgs e)
         {
        
             bağlantı.Open();
-            string komut = "Select * From Admın where(Username='" + usernametxt.Text + "')AND pass='" + passtxt.Text + "'";
+            string komut = "Select * From Kullanicilar where(Email='" + usernametxt.Text + "')AND Sifre='" + passtxt.Text + "'";
             SqlCommand işlem = new SqlCommand(komut, bağlantı);
             SqlDataReader oku = işlem.ExecuteReader();
             if (oku.Read())

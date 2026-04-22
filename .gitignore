@@ -1,10 +1,53 @@
-echo bin/ > .gitignore
-echo obj/ >> .gitignore
-echo *.user >> .gitignore
-echo *.suo >> .gitignore
-echo .vs/ >> .gitignore
-echo *.dll >> .gitignore
-echo *.exe >> .gitignore
-echo *.pdb >> .gitignore
-echo *.log >> .gitignore
-echo *.tmp >> .gitignore
+# Build outputs
+bin/
+obj/
+out/
+publish/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# NuGet
+*.nupkg
+packages/
+
+# ASP.NET / config secrets
+appsettings.Development.json
+appsettings.Production.json
+secrets.json
+
+# Database files (local dev)
+*.mdf
+*.ldf
+*.sqlite
+*.db
+
+# Crash / debug files
+*.dmp
+*.pdb
+
+# Publish folder
+**/publish/
+
+# IIS Express
+.iisexpress/
