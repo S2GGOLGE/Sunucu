@@ -29,7 +29,7 @@ namespace ANA_SUNUCU
             {
                 bağlantı.Open();
 
-                string komut = "SELECT * FROM Kullanicilar WHERE Email=@email AND Sifre=@sifre";
+                string komut = "SELECT * FROM Users WHERE Username=@email AND Password=@sifre";
 
                 SqlCommand işlem = new SqlCommand(komut, bağlantı);
 
