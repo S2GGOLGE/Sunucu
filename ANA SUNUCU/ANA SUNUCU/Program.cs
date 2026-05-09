@@ -13,7 +13,7 @@ namespace ANA_SUNUCU
             ApplicationConfiguration.Initialize();
             SUNUCU.Setup_Server(2, 8585);
             SUNUCU.Start_Server();
-            Application.Run(new Login());
+            Application.Run(new Başlangıc());
         }
     }
 }

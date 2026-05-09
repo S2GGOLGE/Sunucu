@@ -20,34 +20,71 @@ namespace ANA_SUNUCU
         {
 
         }
-        SqlConnection bağlantı = new SqlConnection("Data Source=Emree;Initial Catalog=Sıunucu;Integrated Security=True;Multiple Active Result Sets=True;Encrypt=False");
+        SqlConnection bağlantı = new SqlConnection(
+            "Data Source=Emree;Initial Catalog=Sunucu;Integrated Security=True;Multiple Active Result Sets=True;Encrypt=False");
         private void button1_Click(object sender, EventArgs e)
         {
-       
-            bağlantı.Open();
-            string komut = "Select * From Kullanicilar where(Email='" + usernametxt.Text + "')AND Sifre='" + passtxt.Text + "'";
-            SqlCommand işlem = new SqlCommand(komut, bağlantı);
-            SqlDataReader oku = işlem.ExecuteReader();
-            if (oku.Read())
-            {
-                MessageBox.Show("Hoşgeldiniz " + usernametxt.Text + " Efendim", "Sistem");
-                Menu menu = new Menu();
-                menu.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Şifre Yada Kullanıcı Adı Hatalı Lutfen Tekrar Deneyiniz", "Sistem", MessageBoxButtons.OK, MessageBoxIcon.Question);
-                passtxt.Clear();
-            }
 
-            
+            try
+            {
+                bağlantı.Open();
+
+                string komut = "SELECT * FROM Kullanicilar WHERE Email=@email AND Sifre=@sifre";
+
+                SqlCommand işlem = new SqlCommand(komut, bağlantı);
+
+                işlem.Parameters.AddWithValue("@email", usernametxt.Text);
+                işlem.Parameters.AddWithValue("@sifre", passtxt.Text);
+
+                SqlDataReader oku = işlem.ExecuteReader();
+
+                if (oku.Read())
+                {
+                    MessageBox.Show("Hoşgeldiniz " + usernametxt.Text + " Efendim", "Sistem");
+
+                    Menu menu = new Menu();
+                    menu.Show();
+
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "Şifre ya da kullanıcı adı hatalı!",
+                        "Sistem",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                    );
+
+                    passtxt.Clear();
+                    usernametxt.Focus();
+                }
+
+                oku.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata: " + ex.Message);
+            }
+            finally
+            {
+                bağlantı.Close();
+            }
         }
 
         private void exit_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Kapatmak istedğinize emin misiniz","SİSTEM",MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            Application.Exit();
+            var result = MessageBox.Show(
+                "Kapatmak istediğinize emin misiniz?",
+                "SİSTEM",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }
