@@ -95,5 +95,22 @@ namespace ANA_SUNUCU
                 MessageBox.Show("HATA:" + ex.Message);
             }
         }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string path = @"Y:\Sesli Asistan\Aı\Aı\bin\Debug\net10.0\Aı.exe";
+                serverProcess = new Process();
+                serverProcess.StartInfo.FileName = path;
+                serverProcess.StartInfo.FileName = path;
+                serverProcess.Start();
+                MessageBox.Show("Aı Açıldı");
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show("HATA:" + ex.Message);
+            }
+        }
     }
 }
