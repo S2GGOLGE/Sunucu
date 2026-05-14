@@ -139,8 +139,8 @@ namespace ANA_SUNUCU
                 serverProcess.StartInfo = new ProcessStartInfo
                 {
                     FileName = "python",
-                    Arguments = "\"C:\\Users\\cetin\\Desktop\\JARVIS 2\\jarvis\\jarvis\\main.py\"",
-                    WorkingDirectory = @"C:\Users\cetin\Desktop\JARVIS 2\jarvis\jarvis",
+                    Arguments = "\"Y:\\Sesli Asistan\\jarvis\\jarvis\\main.py\"",
+                    WorkingDirectory = @"Y:\Sesli Asistan\jarvis\jarvis",
                     UseShellExecute = false,
                     CreateNoWindow = false
                 };
@@ -152,6 +152,7 @@ namespace ANA_SUNUCU
             catch (Exception ex)
             {
                 MessageBox.Show("HATA: " + ex.Message);
+
             }
         }
     }
