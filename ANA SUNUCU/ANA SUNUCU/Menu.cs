@@ -14,14 +14,23 @@ namespace ANA_SUNUCU
             InitializeComponent();
         }
 
-        // ORTAK EXE BAŞLATMA METODU
-        private void ProgramBaslat(string path, string mesaj, bool admin = false, string arguments = "")
+        // =========================
+        // ORTAK ÇALIŞTIRMA MOTORU
+        // =========================
+        private void ProgramBaslat(
+            string path,
+            string mesaj,
+            bool admin = false,
+            string arguments = "",
+            bool isPython = false)
         {
             try
             {
-                if (!File.Exists(path))
+                // Python değilse dosya kontrolü yap
+                if (!isPython && !File.Exists(path))
                 {
-                    MessageBox.Show("Dosya bulunamadı:\n" + path,
+                    MessageBox.Show(
+                        $"Dosya bulunamadı:\n{path}",
                         "HATA",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
@@ -31,14 +40,28 @@ namespace ANA_SUNUCU
 
                 serverProcess = new Process();
 
+                string fileName;
+                string args = arguments;
+
+                // PYTHON MODU
+                if (isPython)
+                {
+                    fileName = "python";
+                    args = $"\"{path}\" {arguments}";
+                }
+                else
+                {
+                    fileName = path;
+                }
+
                 serverProcess.StartInfo = new ProcessStartInfo
                 {
-                    FileName = path,
-                    Arguments = arguments,
+                    FileName = fileName,
+                    Arguments = args,
                     WorkingDirectory = Path.GetDirectoryName(path),
                     UseShellExecute = true,
-                    Verb = admin ? "runas" : "",
-                    CreateNoWindow = false
+                    CreateNoWindow = false,
+                    Verb = admin ? "runas" : null
                 };
 
                 serverProcess.Start();
@@ -59,101 +82,82 @@ namespace ANA_SUNUCU
             }
         }
 
-        // HOME
+        // =========================
+        // NAVIGATION
+        // =========================
         private void button2_Click(object sender, EventArgs e)
         {
-            HOME home = new HOME();
-            home.Show();
+            new HOME().Show();
             this.Hide();
         }
 
-        // PROJELER
         private void button3_Click(object sender, EventArgs e)
         {
-            PROJELER proje = new PROJELER();
-            proje.Show();
+            new PROJELER().Show();
             this.Hide();
         }
 
-        // ÇIKIŞ
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(
-                "Çıkış yapmak istediğinize emin misiniz?",
+            if (MessageBox.Show("Çıkış yapmak istiyor musunuz?",
                 "Sistem",
                 MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
+                MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Login login = new Login();
-                login.Show();
+                new Login().Show();
                 this.Close();
             }
         }
 
-        // JARVIS
+        // =========================
+        // JARVIS (PYTHON)
+        // =========================
         private void button4_Click(object sender, EventArgs e)
         {
-            string path =
-                @"C:\Users\DELL\OneDrive\Masaüstü\Projeler\JARVİS\JARVİS\bin\Debug\net10.0-windows\JARVİS.exe";
-
             ProgramBaslat(
-                path,
+                @"Y:\Sesli Asistan\Jarvis\jarvis\jarvis\main.py",
                 "Jarvis Başlatıldı!",
                 true,
-                "127.0.0.1 8586");
+                "127.0.0.1 8586",
+                true
+            );
         }
 
-        // TAKSİT TAKİP
+        // =========================
+        // TAKSİT TAKİP (EXE)
+        // =========================
         private void button5_Click(object sender, EventArgs e)
         {
-            string path =
-                @"Y:\TAKSİT TAKİP\TAKSİT TAKİP\bin\Debug\net10.0-windows\TAKSİT TAKİP.exe";
-
             ProgramBaslat(
-                path,
+                @"Y:\TAKSİT TAKİP\TAKSİT TAKİP\bin\Debug\net10.0-windows\TAKSİT TAKİP.exe",
                 "TAKSİT TAKİP Açıldı",
-                true,
-                "127.0.0.1 8585");
+                true
+            );
         }
 
-        // GYM PRO BACKEND
+        // =========================
+        // GYM BACKEND (EXE)
+        // =========================
         private void button6_Click(object sender, EventArgs e)
         {
-            string path =
-                @"Y:\GYM-PRO\Backend\SeneOdev\bin\Debug\net8.0\SeneOdev.exe";
-
             ProgramBaslat(
-                path,
-                "Sene Ödev Backend Aktif");
+                @"Y:\GYM-PRO\Backend\SeneOdev\bin\Debug\net8.0\SeneOdev.exe",
+                "Backend Aktif"
+            );
         }
 
-        // AI
+        // =========================
+        // AI (PYTHON - DUPLICATE FIXED)
+        // =========================
         private void button4_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                serverProcess = new Process();
-
-                serverProcess.StartInfo = new ProcessStartInfo
-                {
-                    FileName = "python",
-                    Arguments = "\"Y:\\Sesli Asistan\\jarvis\\jarvis\\main.py\"",
-                    WorkingDirectory = @"Y:\Sesli Asistan\jarvis\jarvis",
-                    UseShellExecute = false,
-                    CreateNoWindow = false
-                };
-
-                serverProcess.Start();
-
-                MessageBox.Show("Python Jarvis Açıldı");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("HATA: " + ex.Message);
-
-            }
+            ProgramBaslat(
+                @"Y:\Sesli Asistan\jarvis\jarvis\jarvis\main.py",
+                "AI Açıldı",
+                false,
+                "",
+                true
+            );
         }
     }
 }
